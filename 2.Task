@@ -1,0 +1,8 @@
+2.1
+a) SELECT sum(sum_weight)/count(1) as avr FROM 
+(SELECT saller_id, sum(fruit_weight) as sum_weight FROM seller_info GROUP BY saller_id)
+
+b) SELECT sum(fruit_weight)/count(DISTINCT saller_id) as avr FROM seller_info
+
+2.2
+    SELECT count(saller_id) as count_sellers FROM consumption_info GROUP BY saller_id
