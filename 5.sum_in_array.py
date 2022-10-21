@@ -19,3 +19,12 @@ def sum_in_array(sorted_array):
             return [-1]    
 
 print(sum_in_array(sorted_array))
+
+#v2
+def sum_in_array2(sorted_array):
+    for key,i in enumerate(sorted_array):
+      if (S-i) in sorted_array[key+1:]:
+        return [i,S-i]
+    return [-1]
+
+print(sum_in_array2(sorted_array))
